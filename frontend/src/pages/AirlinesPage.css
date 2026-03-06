@@ -1,0 +1,172 @@
+.airlines-page {
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.airlines-page__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.airlines-page__header h1 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.airlines-page__add-btn {
+  padding: 0.5rem 1rem;
+}
+
+.airlines-page__table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+}
+
+.airlines-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.airlines-table th,
+.airlines-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.airlines-table th {
+  background: rgba(255, 255, 255, 0.06);
+  font-weight: 600;
+}
+
+.airlines-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.airlines-table__remove-btn {
+  padding: 0.35rem 0.65rem;
+  font-size: 0.875rem;
+  color: #f87171;
+  border-color: rgba(248, 113, 113, 0.4);
+}
+
+.airlines-table__remove-btn:hover {
+  border-color: #f87171;
+  background: rgba(248, 113, 113, 0.12);
+}
+
+@media (prefers-color-scheme: light) {
+  .airlines-page__table-wrap {
+    border-color: rgba(0, 0, 0, 0.12);
+  }
+  .airlines-table th,
+  .airlines-table td {
+    border-bottom-color: rgba(0, 0, 0, 0.08);
+  }
+  .airlines-table th {
+    background: rgba(0, 0, 0, 0.04);
+  }
+  .airlines-table tbody tr:hover {
+    background: rgba(0, 0, 0, 0.02);
+  }
+  .airlines-table__remove-btn {
+    color: #dc2626;
+    border-color: rgba(220, 38, 38, 0.5);
+  }
+  .airlines-table__remove-btn:hover {
+    background: rgba(220, 38, 38, 0.1);
+    border-color: #dc2626;
+  }
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #242424;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  min-width: 320px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.modal h2 {
+  margin: 0 0 1.25rem;
+  font-size: 1.25rem;
+}
+
+@media (prefers-color-scheme: light) {
+  .modal {
+    background: #fff;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.airline-form__field {
+  margin-bottom: 1rem;
+}
+
+.airline-form__field label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.airline-form__field input,
+.airline-form__field select {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
+  color: inherit;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+.airline-form__field input:focus,
+.airline-form__field select:focus {
+  outline: none;
+  border-color: #646cff;
+}
+
+@media (prefers-color-scheme: light) {
+  .airline-form__field input,
+  .airline-form__field select {
+    border-color: #ccc;
+    background: #fff;
+    color: #213547;
+  }
+}
+
+.airline-form__actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (prefers-color-scheme: light) {
+  .airline-form__actions {
+    border-top-color: rgba(0, 0, 0, 0.08);
+  }
+}
+
+.airline-form__actions button {
+  padding: 0.5rem 1rem;
+}
